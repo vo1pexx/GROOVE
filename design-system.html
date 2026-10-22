@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дизайн-система — GROOVE</title>
+<meta name="description" content="Кольори, типографіка та компоненти інтерфейсу GROOVE зі станами.">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до основного змісту</a>
+<div class="promo-bar">
+  <div class="container">
+    <p>Безкоштовна доставка по Україні від 2500 ₴</p>
+    <p>Нові платівки щоп’ятниці</p>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="GROOVE — на головну">GROOVE<span>.</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-controls="main-nav">
+    <label for="nav-toggle" class="burger"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="visually-hidden">Меню</span></label>
+    <nav class="main-nav" id="main-nav" aria-label="Головна навігація">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="artist.html">Виконавці</a></li>
+        <li><a href="index.html#genres">Жанри</a></li>
+      </ul>
+    </nav>
+    <ul class="header-actions">
+      <li><a href="search.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Пошук</span></a></li>
+      <li><a href="wishlist.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg><span>Обране</span><span class="count">1<span class="visually-hidden"> товар</span></span></a></li>
+      <li><a href="cart.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Кошик</span><span class="count">2<span class="visually-hidden"> товари</span></span></a></li>
+      <li><a href="login.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.200 3.600-7 8-7s8 2.800 8 7"/></svg><span>Профіль</span></a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<div class="container">
+  <header class="page-head"><p class="eyebrow">Дизайн-система</p><h1>Компоненти</h1></header>
+  <section class="ds-block" aria-labelledby="ds-colors"><h2 id="ds-colors">Кольори</h2><ul class="swatches"><li class="swatch"><div class="swatch__color sw-bg"></div><p><strong>Background</strong>#141414</p></li><li class="swatch"><div class="swatch__color sw-surface"></div><p><strong>Surface</strong>#1E1E1E</p></li><li class="swatch"><div class="swatch__color sw-text"></div><p><strong>Text / Cream</strong>#F4EDE0</p></li><li class="swatch"><div class="swatch__color sw-beige"></div><p><strong>Neutral / Beige</strong>#D8C7A8</p></li><li class="swatch"><div class="swatch__color sw-accent"></div><p><strong>Accent / Terracotta</strong>#C4673F</p></li><li class="swatch"><div class="swatch__color sw-muted"></div><p><strong>Text / Secondary</strong>#9A958C</p></li><li class="swatch"><div class="swatch__color sw-success"></div><p><strong>Success</strong>#8FB98A</p></li><li class="swatch"><div class="swatch__color sw-error"></div><p><strong>Error</strong>#EE8A7F</p></li></ul></section>
+  <section class="ds-block" aria-labelledby="ds-type"><h2 id="ds-type">Типографіка</h2>
+    <p class="type-sample ds-display">Display</p>
+    <p class="type-sample ds-h1">Заголовок H1</p><p class="type-sample ds-h2">Заголовок H2</p><p class="type-sample ds-h3">Заголовок H3</p>
+    <p>Основний текст Manrope для описів, підписів і форм.</p>
+    <p class="text-small text-muted">Допоміжний текст і підписи — не менше 12 px.</p>
+  </section>
+  <section class="ds-block" aria-labelledby="ds-buttons"><h2 id="ds-buttons">Кнопки та стани</h2>
+    <div class="table-wrap"><table class="ds-table">
+      <caption>Типи кнопок і їхні стани</caption>
+      <thead><tr><th scope="col">Тип</th><th scope="col">Default</th><th scope="col">Hover</th><th scope="col">Active</th><th scope="col">Disabled</th><th scope="col">Loading</th></tr></thead>
+      <tbody><tr><th scope="row">Primary</th>
+<td><button class="btn btn--primary" type="button">Кнопка</button></td>
+<td><button class="btn btn--primary is-hover" type="button">Кнопка</button></td>
+<td><button class="btn btn--primary is-active" type="button">Кнопка</button></td>
+<td><button class="btn btn--primary" type="button" disabled>Кнопка</button></td>
+<td><button class="btn btn--primary is-loading" type="button" aria-label="Завантаження">Кнопка</button></td></tr><tr><th scope="row">Secondary</th>
+<td><button class="btn btn--secondary" type="button">Кнопка</button></td>
+<td><button class="btn btn--secondary is-hover" type="button">Кнопка</button></td>
+<td><button class="btn btn--secondary is-active" type="button">Кнопка</button></td>
+<td><button class="btn btn--secondary" type="button" disabled>Кнопка</button></td>
+<td><button class="btn btn--secondary is-loading" type="button" aria-label="Завантаження">Кнопка</button></td></tr><tr><th scope="row">Ghost</th>
+<td><button class="btn btn--ghost" type="button">Кнопка</button></td>
+<td><button class="btn btn--ghost is-hover" type="button">Кнопка</button></td>
+<td><button class="btn btn--ghost is-active" type="button">Кнопка</button></td>
+<td><button class="btn btn--ghost" type="button" disabled>Кнопка</button></td>
+<td><button class="btn btn--ghost is-loading" type="button" aria-label="Завантаження">Кнопка</button></td></tr><tr><th scope="row">Danger</th>
+<td><button class="btn btn--danger" type="button">Кнопка</button></td>
+<td><button class="btn btn--danger is-hover" type="button">Кнопка</button></td>
+<td><button class="btn btn--danger is-active" type="button">Кнопка</button></td>
+<td><button class="btn btn--danger" type="button" disabled>Кнопка</button></td>
+<td><button class="btn btn--danger is-loading" type="button" aria-label="Завантаження">Кнопка</button></td></tr></tbody>
+    </table></div>
+    <h3 class="mt-8">Icon Button</h3>
+    <div class="ds-state">
+      <button class="icon-btn" type="button" aria-label="Обране"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+      <button class="icon-btn is-hover" type="button" aria-label="Обране (hover)"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+      <button class="icon-btn" type="button" aria-pressed="true" aria-label="В обраному"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+      <button class="icon-btn" type="button" disabled aria-label="Недоступно"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+    </div>
+  </section>
+  <section class="ds-block" aria-labelledby="ds-forms"><h2 id="ds-forms">Поля форм</h2>
+    <div class="form-grid">
+      <div class="field"><label for="ds-i1">Input — default</label><input class="input" id="ds-i1" type="text" placeholder="Текст"></div>
+      <div class="field"><label for="ds-i2">Input — hover</label><input class="input is-hover" id="ds-i2" type="text" value="Текст"></div>
+      <div class="field"><label for="ds-i3">Input — focus</label><input class="input is-focus" id="ds-i3" type="text" value="Текст"></div>
+      <div class="field"><label for="ds-i4">Input — disabled</label><input class="input" id="ds-i4" type="text" value="Недоступно" disabled></div>
+      <div class="field"><label for="ds-i5">Input — error</label><input class="input" id="ds-i5" type="text" inputmode="email" value="anna.example" aria-invalid="true" aria-describedby="ds-i5-e"><p class="error-msg" id="ds-i5-e"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v6m0 3.500v.5"/></svg> Вкажіть коректну адресу пошти</p></div>
+      <div class="field"><label for="ds-s1">Select</label><select class="select" id="ds-s1"><option>За популярністю</option><option>Ціна: від низької</option></select></div>
+    </div>
+    <div class="ds-state mt-4">
+      <label class="check"><input type="checkbox"><span>Checkbox</span></label>
+      <label class="check"><input type="checkbox" checked><span>Checked</span></label>
+      <label class="check"><input type="checkbox" disabled><span>Disabled</span></label>
+      <label class="radio"><input type="radio" name="ds-r"><span>Radio</span></label>
+      <label class="radio"><input type="radio" name="ds-r" checked><span>Selected</span></label>
+      <label class="radio"><input type="radio" name="ds-r" disabled><span>Disabled</span></label>
+    </div>
+  </section>
+  <section class="ds-block" aria-labelledby="ds-misc"><h2 id="ds-misc">Quantity, Rating, Badge, Pagination</h2>
+    <div class="ds-state">
+      <div class="qty" role="group" aria-label="Кількість">
+  <button type="button" aria-label="Зменшити кількість">−</button>
+  <label class="visually-hidden" for="ds-q1">Кількість</label>
+  <input id="ds-q1" type="number" value="2" min="1" max="10" inputmode="numeric">
+  <button type="button" aria-label="Збільшити кількість">+</button>
+</div>
+      <p class="rating"><span class="rating__stars" style="--rating:4.5" aria-hidden="true"></span><span>4,5 з 5</span></p>
+      <span class="badge badge--new">Новинка</span><span class="badge badge--stock">В наявності</span><span class="badge badge--out">Немає в наявності</span>
+    </div>
+    <div class="mt-8"><nav class="pagination" aria-label="Сторінки каталогу">
+  <ul>
+    <li><span aria-disabled="true">Назад</span></li>
+    <li><a href="catalog.html" aria-current="page"><span class="visually-hidden">Сторінка </span>1</a></li>
+    <li><a href="catalog.html"><span class="visually-hidden">Сторінка </span>2</a></li>
+    <li><a href="catalog.html"><span class="visually-hidden">Сторінка </span>3</a></li>
+    <li><a href="catalog.html">Далі</a></li>
+  </ul>
+</nav></div>
+  </section>
+  <section class="ds-block" aria-labelledby="ds-card"><h2 id="ds-card">Product Card</h2>
+    <ul class="grid-products grid-products--3"><li>
+<article class="product-card">
+  <div class="product-card__media">
+    <a href="product.html" tabindex="-1" aria-hidden="true"><img src="images/covers/tykhi-orbity.svg" alt="Обкладинка альбому «Тихі орбіти», Vira Nova" width="600" height="600" loading="lazy"></a>
+    <button class="icon-btn product-card__fav" type="button" aria-pressed="false" aria-label="Додати «Тихі орбіти» до обраного"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+    <a class="btn btn--sm product-card__view" href="product.html">Переглянути<span class="visually-hidden"> «Тихі орбіти»</span></a>
+  </div>
+  <div class="product-card__badges"><span class="badge badge--new">Новинка</span></div>
+  <h3 class="product-card__title"><a href="product.html">Тихі орбіти</a></h3>
+  <p class="product-card__meta">Vira Nova · Electronic · 2024</p>
+  <p class="product-card__price">1 190 ₴</p>
+  <div class="product-card__actions">
+    <button class="btn btn--primary btn--block" type="button">Додати до кошика<span class="visually-hidden">: Тихі орбіти</span></button>
+  </div>
+</article>
+</li><li>
+<article class="product-card">
+  <div class="product-card__media">
+    <a href="product.html" tabindex="-1" aria-hidden="true"><img src="images/covers/nichnyi-tramvai.svg" alt="Обкладинка альбому «Нічний трамвай», Atlas 7" width="600" height="600" loading="lazy"></a>
+    <button class="icon-btn product-card__fav" type="button" aria-pressed="true" aria-label="Додати «Нічний трамвай» до обраного"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+    <a class="btn btn--sm product-card__view" href="product.html">Переглянути<span class="visually-hidden"> «Нічний трамвай»</span></a>
+  </div>
+  <div class="product-card__badges"></div>
+  <h3 class="product-card__title"><a href="product.html">Нічний трамвай</a></h3>
+  <p class="product-card__meta">Atlas 7 · Jazz · 2023</p>
+  <p class="product-card__price">1 350 ₴</p>
+  <div class="product-card__actions">
+    <button class="btn btn--primary btn--block" type="button">Додати до кошика<span class="visually-hidden">: Нічний трамвай</span></button>
+  </div>
+</article>
+</li><li>
+<article class="product-card product-card--out">
+  <div class="product-card__media">
+    <a href="product.html" tabindex="-1" aria-hidden="true"><img src="images/covers/synia-kimnata.svg" alt="Обкладинка альбому «Синя кімната», Quartet 82" width="600" height="600" loading="lazy"></a>
+    <button class="icon-btn product-card__fav" type="button" aria-pressed="false" aria-label="Додати «Синя кімната» до обраного"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg></button>
+    <a class="btn btn--sm product-card__view" href="product.html">Переглянути<span class="visually-hidden"> «Синя кімната»</span></a>
+  </div>
+  <div class="product-card__badges"><span class="badge badge--out">Немає в наявності</span></div>
+  <h3 class="product-card__title"><a href="product.html">Синя кімната</a></h3>
+  <p class="product-card__meta">Quartet 82 · Jazz · 2021</p>
+  <p class="product-card__price">1 280 ₴</p>
+  <div class="product-card__actions">
+    <button class="btn btn--primary btn--block" type="button" disabled>Немає в наявності<span class="visually-hidden">: Синя кімната</span></button>
+  </div>
+</article>
+</li></ul>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="logo">GROOVE<span>.</span></p>
+      <p class="text-muted">Інтернет-магазин вінілових платівок для колекціонерів, меломанів і тих, хто тільки починає слухати вініл.</p>
+    </div>
+    <nav aria-label="Навігація у футері">
+      <h2>Навігація</h2>
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="artist.html">Виконавці</a></li>
+        <li><a href="index.html#genres">Жанри</a></li>
+        <li><a href="wishlist.html">Обране</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Інформація для покупців">
+      <h2>Інформація</h2>
+      <ul>
+        <li><a href="index.html#about">Про магазин</a></li>
+        <li><a href="cart.html">Доставка</a></li>
+        <li><a href="profile.html#orders">Повернення</a></li>
+        <li><a href="design-system.html">Дизайн-система</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Контакти</h2>
+      <address>
+        <a href="mailto:hello@groove.example">hello@groove.example</a>
+        <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+        <span>Київ, вул. Прикладна, 1</span>
+      </address>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 GROOVE. Навчальний проєкт.</p>
+      <p>Усі зображення — оригінальні ілюстрації-заглушки.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

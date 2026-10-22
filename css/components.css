@@ -1,0 +1,180 @@
+/* Компоненти дизайн-системи: кнопки, картки, форми, бейджі тощо.
+   Стани: default / hover / active / disabled / loading / error.
+   Класи .is-hover, .is-active використовуються лише на сторінці design-system.html */
+
+/* ---------- Кнопки ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 3rem; padding: 0.75rem 1.5rem; border: 1px solid transparent; border-radius: var(--radius-sm); font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1.2; transition: background-color 0.15s, border-color 0.15s, color 0.15s; }
+.btn svg { width: 1.125rem; height: 1.125rem; flex: none; }
+.btn--primary { background: var(--color-accent); color: var(--color-on-accent); }
+.btn--primary:hover, .btn--primary.is-hover { background: var(--color-accent-hover); }
+.btn--primary:active, .btn--primary.is-active { background: var(--color-accent-active); }
+.btn--secondary { background: transparent; color: var(--color-text); border-color: var(--color-beige); }
+.btn--secondary:hover, .btn--secondary.is-hover { background: var(--color-beige); color: var(--color-on-accent); }
+.btn--secondary:active, .btn--secondary.is-active { background: var(--color-accent-active); border-color: var(--color-accent-active); color: var(--color-on-accent); }
+.btn--ghost { background: transparent; color: var(--color-beige); padding-inline: var(--space-3); }
+.btn--ghost:hover, .btn--ghost.is-hover { color: var(--color-text); background: var(--color-surface-raised); }
+.btn--ghost:active, .btn--ghost.is-active { background: var(--color-border); }
+.btn--danger { background: transparent; color: var(--color-error); border-color: var(--color-error); }
+.btn--danger:hover, .btn--danger.is-hover { background: var(--color-error); color: var(--color-on-accent); }
+.btn--sm { min-height: 2.5rem; padding: 0.5rem 1rem; font-size: var(--fs-caption); }
+.btn--block { width: 100%; }
+.btn[disabled], .btn[aria-disabled="true"] { background: var(--color-surface-raised); border-color: var(--color-surface-raised); color: var(--color-text-muted); cursor: not-allowed; }
+.btn.is-loading { position: relative; color: transparent; pointer-events: none; }
+.btn.is-loading::after { content: ""; position: absolute; width: 1.25rem; height: 1.25rem; border: 2px solid var(--color-on-accent); border-right-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite; }
+.btn--secondary.is-loading::after { border-color: var(--color-beige); border-right-color: transparent; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.icon-btn { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-full); background: transparent; color: var(--color-text); transition: background-color 0.15s, color 0.15s, border-color 0.15s; }
+.icon-btn svg { width: 1.25rem; height: 1.25rem; }
+.icon-btn:hover, .icon-btn.is-hover { background: var(--color-surface-raised); border-color: var(--color-beige); }
+.icon-btn:active, .icon-btn.is-active { background: var(--color-beige); color: var(--color-on-accent); }
+.icon-btn[disabled] { color: var(--color-text-muted); border-color: var(--color-surface-raised); cursor: not-allowed; background: transparent; }
+.icon-btn[aria-pressed="true"] { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.icon-btn[aria-pressed="true"] svg { fill: currentColor; }
+
+/* ---------- Бейджі ---------- */
+.badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.55rem; border: 1px solid var(--color-beige); border-radius: var(--radius-sm); color: var(--color-beige); font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.4; }
+.badge--new { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.badge--stock::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--color-success); }
+.badge--out { border-color: var(--color-text-muted); color: var(--color-text-muted); }
+.badge--out::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--color-error); }
+
+/* ---------- Рейтинг ---------- */
+.rating { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--fs-small); }
+.rating__stars { --pct: calc(var(--rating, 5) / 5 * 100%); background: linear-gradient(90deg, var(--color-accent) var(--pct), #55514b var(--pct)); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.125rem; letter-spacing: 0.1em; line-height: 1; }
+.rating__stars::before { content: "★★★★★"; }
+
+/* ---------- Картка товару ---------- */
+.product-card { display: flex; flex-direction: column; height: 100%; }
+.product-card__media { position: relative; overflow: hidden; background: var(--color-surface); }
+.product-card__media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform 0.4s ease; }
+.product-card:hover .product-card__media img { transform: scale(1.03); }
+.product-card__fav { position: absolute; top: var(--space-3); right: var(--space-3); background: var(--color-text); border-color: var(--color-text); color: var(--color-bg); }
+.product-card__fav:hover { background: var(--color-beige); }
+.product-card__view { position: absolute; left: var(--space-3); right: var(--space-3); bottom: var(--space-3); opacity: 0; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s; background: rgba(20, 20, 20, 0.92); }
+.product-card:hover .product-card__view, .product-card:focus-within .product-card__view { opacity: 1; transform: none; }
+.product-card__badges { display: flex; gap: var(--space-2); min-height: 1.5rem; margin-top: var(--space-3); align-items: center; }
+.product-card__title { margin: var(--space-2) 0 var(--space-1); font-size: 1.375rem; }
+.product-card__title a:hover { color: var(--color-beige); }
+.product-card__meta { margin: 0 0 var(--space-3); color: var(--color-text-muted); font-size: var(--fs-small); }
+.product-card__price { margin: auto 0 var(--space-3); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; }
+.product-card__actions { display: grid; gap: var(--space-2); }
+.product-card--out .product-card__media img { opacity: 0.55; }
+
+/* ---------- Картка виконавця / жанру ---------- */
+.artist-card a { display: block; }
+.artist-card__photo { overflow: hidden; background: var(--color-surface); }
+.artist-card__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform 0.4s ease; }
+.artist-card a:hover img { transform: scale(1.03); }
+.artist-card h3 { margin: var(--space-3) 0 var(--space-1); }
+.artist-card p { margin: 0; color: var(--color-text-muted); font-size: var(--fs-small); }
+
+.genre-card a { display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 3; padding: var(--space-6); color: var(--color-on-accent); transition: transform 0.2s; }
+.genre-card a:hover { transform: translateY(-4px); }
+.genre-card h3 { margin: 0; font-size: 2rem; }
+.genre-card p { margin: 0; font-size: var(--fs-small); font-weight: 700; }
+.genre--1 a { background: var(--color-accent); }
+.genre--2 a { background: #8fa3b0; }
+.genre--3 a { background: #aba48b; }
+.genre--4 a { background: #b08a9a; }
+.genre--5 a { background: #7fa08c; }
+.genre--6 a { background: var(--color-beige); }
+.genre--7 a { background: #8e9470; }
+.genre--8 a { background: #b8914a; }
+
+/* ---------- Форми ---------- */
+.field { display: grid; gap: var(--space-2); margin-bottom: var(--space-4); }
+.field label, .field legend, .label { font-size: var(--fs-small); font-weight: 600; color: var(--color-beige); }
+.input, .select, .textarea { width: 100%; min-height: 3rem; padding: 0.7rem 1rem; background: var(--color-surface); border: 1px solid #5a554d; border-radius: var(--radius-sm); color: var(--color-text); transition: border-color 0.15s, background-color 0.15s; }
+.textarea { min-height: 7rem; resize: vertical; }
+.input::placeholder { color: var(--color-text-muted); opacity: 1; }
+.input:hover, .select:hover, .input.is-hover { border-color: var(--color-beige); }
+.input:focus, .select:focus, .input.is-focus { outline: 2px solid var(--color-beige); outline-offset: 1px; border-color: var(--color-beige); background: var(--color-surface-raised); }
+.input[aria-invalid="true"], .input.is-error { border-color: var(--color-error); }
+.input[disabled], .select[disabled] { background: var(--color-bg); color: var(--color-text-muted); border-style: dashed; cursor: not-allowed; }
+.select { appearance: none; padding-right: 2.5rem; background-image: linear-gradient(45deg, transparent 50%, var(--color-beige) 50%), linear-gradient(135deg, var(--color-beige) 50%, transparent 50%); background-position: calc(100% - 1.25rem) 50%, calc(100% - 0.9rem) 50%; background-size: 0.35rem 0.35rem; background-repeat: no-repeat; }
+.select option { background: var(--color-surface); color: var(--color-text); }
+.help { margin: 0; font-size: var(--fs-caption); color: var(--color-text-muted); }
+.error-msg { display: flex; align-items: center; gap: var(--space-2); margin: 0; font-size: var(--fs-small); color: var(--color-error); }
+.error-msg svg { width: 1rem; height: 1rem; flex: none; }
+fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+legend { padding: 0; }
+
+.check, .radio { display: flex; align-items: center; gap: var(--space-3); min-height: 2.25rem; font-size: var(--fs-small); cursor: pointer; }
+.check input, .radio input { appearance: none; flex: none; width: 1.25rem; height: 1.25rem; margin: 0; border: 2px solid #8a857c; background: transparent; cursor: pointer; display: inline-grid; place-content: center; }
+.check input { border-radius: var(--radius-sm); }
+.radio input { border-radius: 50%; }
+.check input::after { content: ""; width: 0.6rem; height: 0.35rem; border: solid var(--color-on-accent); border-width: 0 0 2px 2px; transform: rotate(-45deg) translate(1px, -1px); opacity: 0; }
+.radio input::after { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--color-accent); opacity: 0; }
+.check input:checked { background: var(--color-accent); border-color: var(--color-accent); }
+.check input:checked::after, .radio input:checked::after { opacity: 1; }
+.radio input:checked { border-color: var(--color-accent); }
+.check input:hover, .radio input:hover { border-color: var(--color-beige); }
+.check input[disabled], .radio input[disabled] { border-color: var(--color-surface-raised); cursor: not-allowed; }
+.check input[disabled] ~ span, .radio input[disabled] ~ span { color: var(--color-text-muted); }
+.check input[aria-invalid="true"] { border-color: var(--color-error); }
+
+/* ---------- Кількість ---------- */
+.qty { display: inline-flex; align-items: stretch; border: 1px solid #5a554d; }
+.qty button { width: 2.75rem; border: 0; background: transparent; font-size: 1.25rem; line-height: 1; }
+.qty button:hover { background: var(--color-surface-raised); }
+.qty button:active { background: var(--color-beige); color: var(--color-on-accent); }
+.qty button[disabled] { color: var(--color-text-muted); cursor: not-allowed; background: transparent; }
+.qty input { width: 3rem; border: 0; border-inline: 1px solid var(--color-border); background: transparent; text-align: center; -moz-appearance: textfield; }
+.qty input::-webkit-outer-spin-button, .qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ---------- Навігаційні елементи ---------- */
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; font-size: var(--fs-caption); color: var(--color-text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.breadcrumb li + li::before { content: "/"; margin-right: var(--space-2); }
+.breadcrumb a:hover { color: var(--color-text); text-decoration: underline; }
+.breadcrumb [aria-current="page"] { color: var(--color-text); }
+
+.pagination ul { display: flex; justify-content: center; gap: var(--space-2); list-style: none; }
+.pagination a, .pagination span { display: grid; place-items: center; min-width: 2.75rem; height: 2.75rem; padding: 0 var(--space-3); border: 1px solid var(--color-border); font-weight: 700; }
+.pagination a:hover, .pagination a.is-hover { border-color: var(--color-beige); background: var(--color-surface-raised); }
+.pagination [aria-current="page"] { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.pagination [aria-disabled="true"] { color: var(--color-text-muted); border-color: var(--color-surface-raised); cursor: not-allowed; }
+
+/* ---------- Аудіо: трек-лист ---------- */
+.tracklist { list-style: none; border-top: 1px solid var(--color-border); }
+.track { display: grid; grid-template-columns: 2rem 2.75rem 1fr auto; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--color-border); }
+.track__num { color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+.track__title { margin: 0; font-weight: 600; }
+.track__time { color: var(--color-text-muted); font-variant-numeric: tabular-nums; font-size: var(--fs-small); }
+.track__progress { grid-column: 3 / 5; display: flex; align-items: center; gap: var(--space-3); font-size: var(--fs-caption); color: var(--color-text-muted); }
+.track--active { background: var(--color-surface); }
+.track--active .track__title { color: var(--color-accent-hover); }
+.track--unavailable .track__title, .track--unavailable .track__time { color: var(--color-text-muted); }
+.track--unavailable .track__note { font-size: var(--fs-caption); color: var(--color-text-muted); font-weight: 400; margin-left: var(--space-2); }
+progress { appearance: none; width: 100%; height: 4px; border: 0; background: var(--color-border); border-radius: var(--radius-full); overflow: hidden; }
+progress::-webkit-progress-bar { background: var(--color-border); }
+progress::-webkit-progress-value { background: var(--color-accent); }
+progress::-moz-progress-bar { background: var(--color-accent); }
+
+/* ---------- Сповіщення, модальне вікно ---------- */
+.toast { display: flex; align-items: center; gap: var(--space-3); max-width: 28rem; padding: var(--space-3) var(--space-4); background: var(--color-surface-raised); border: 1px solid var(--color-border); border-left: 4px solid var(--color-beige); box-shadow: var(--shadow-raised); font-size: var(--fs-small); }
+.toast p { margin: 0; flex: 1; }
+.toast svg { width: 1.25rem; height: 1.25rem; flex: none; }
+.toast a { font-weight: 700; color: var(--color-beige); text-decoration: underline; }
+.toast--success { border-left-color: var(--color-success); }
+.toast--success svg { color: var(--color-success); }
+.toast--error { border-left-color: var(--color-error); }
+.toast--error svg { color: var(--color-error); }
+
+.modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: var(--space-4); background: rgba(0, 0, 0, 0.7); }
+.modal:target { display: flex; }
+.modal__box { width: min(100%, 30rem); padding: var(--space-8); background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: var(--shadow-raised); }
+.modal__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+
+.alert { display: flex; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--color-error); background: rgba(238, 138, 127, 0.08); }
+.alert svg { width: 1.25rem; height: 1.25rem; flex: none; color: var(--color-error); margin-top: 0.15rem; }
+.alert p { margin: 0; font-size: var(--fs-small); }
+
+/* ---------- Skeleton ---------- */
+.skeleton { background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-surface-raised) 50%, var(--color-surface) 75%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+.skeleton--cover { aspect-ratio: 1 / 1; }
+.skeleton--line { height: 0.875rem; margin-top: var(--space-3); }
+.skeleton--short { width: 55%; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.track__progress span { white-space: nowrap; }
+.track__progress progress { flex: 1; min-width: 4rem; }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оформлення замовлення — GROOVE</title>
+<meta name="description" content="Оформлення замовлення: контактні дані, доставка, спосіб оплати та підтвердження.">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до основного змісту</a>
+<div class="promo-bar">
+  <div class="container">
+    <p>Безкоштовна доставка по Україні від 2500 ₴</p>
+    <p>Нові платівки щоп’ятниці</p>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="GROOVE — на головну">GROOVE<span>.</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-controls="main-nav">
+    <label for="nav-toggle" class="burger"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="visually-hidden">Меню</span></label>
+    <nav class="main-nav" id="main-nav" aria-label="Головна навігація">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="artist.html">Виконавці</a></li>
+        <li><a href="index.html#genres">Жанри</a></li>
+      </ul>
+    </nav>
+    <ul class="header-actions">
+      <li><a href="search.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Пошук</span></a></li>
+      <li><a href="wishlist.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.700 3.700 4.500 7 4.500c2 0 3.400 1 5 3 1.600-2 3-3 5-3 3.300 0 5.400 3.200 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400Z"/></svg><span>Обране</span><span class="count">1<span class="visually-hidden"> товар</span></span></a></li>
+      <li><a href="cart.html" aria-current="page"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Кошик</span><span class="count">2<span class="visually-hidden"> товари</span></span></a></li>
+      <li><a href="login.html"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.200 3.600-7 8-7s8 2.800 8 7"/></svg><span>Профіль</span></a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<div class="container">
+  <header class="page-head"><p class="eyebrow">Оформлення</p><h1>Оформлення замовлення</h1></header>
+  <ol class="stepper" aria-label="Кроки оформлення">
+    <li class="is-current" aria-current="step"><span>Контактні дані</span></li>
+    <li><span>Доставка</span></li>
+    <li><span>Спосіб оплати</span></li>
+    <li><span>Підтвердження</span></li>
+  </ol>
+  <div class="checkout">
+    <form action="states.html#success" method="get" novalidate>
+      <fieldset class="form-block">
+        <legend class="visually-hidden">Контактні дані</legend>
+        <h2>1. Контактні дані</h2>
+        <div class="form-grid">
+          <div class="field"><label for="c-name">Ім’я та прізвище</label><input class="input" id="c-name" name="name" type="text" autocomplete="name" required placeholder="Анна Кавун"></div>
+          <div class="field"><label for="c-phone">Телефон</label><input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__"></div>
+          <div class="field field--full"><label for="c-email">Електронна пошта</label>
+            <input class="input" id="c-email" name="email" type="text" inputmode="email" autocomplete="email" required value="anna.example" aria-invalid="true" aria-describedby="c-email-err">
+            <p class="error-msg" id="c-email-err" role="alert"><svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v6m0 3.500v.5"/></svg> Вкажіть адресу у форматі name@example.com</p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form-block">
+        <legend class="visually-hidden">Доставка</legend>
+        <h2>2. Доставка</h2>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="delivery" value="np" checked><span><strong>Відділення «Нова пошта»</strong><small>1–2 дні</small></span><span class="choice__price">120 ₴</span></label>
+          <label class="choice"><input type="radio" name="delivery" value="courier"><span><strong>Кур’єр за адресою</strong><small>1–2 дні</small></span><span class="choice__price">180 ₴</span></label>
+          <label class="choice"><input type="radio" name="delivery" value="pickup"><span><strong>Самовивіз із магазину</strong><small>Київ, вул. Прикладна, 1</small></span><span class="choice__price">Безкоштовно</span></label>
+        </div>
+        <div class="form-grid mt-6">
+          <div class="field"><label for="d-city">Місто</label><input class="input" id="d-city" name="city" type="text" autocomplete="address-level2" required></div>
+          <div class="field"><label for="d-branch">Відділення або адреса</label><input class="input" id="d-branch" name="branch" type="text" autocomplete="address-line1" required></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-block">
+        <legend class="visually-hidden">Спосіб оплати</legend>
+        <h2>3. Спосіб оплати</h2>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="payment" value="card" checked><span><strong>Банківська картка онлайн</strong><small>Visa, Mastercard</small></span></label>
+          <label class="choice"><input type="radio" name="payment" value="cod"><span><strong>Оплата при отриманні</strong><small>Готівка або картка у відділенні</small></span></label>
+        </div>
+      </fieldset>
+      <section>
+        <h2>4. Підтвердження</h2>
+        <label class="check"><input type="checkbox" name="agree" required><span>Погоджуюсь з умовами доставки та повернення</span></label>
+        <button class="btn btn--primary btn--block mt-6" type="submit">Підтвердити замовлення <svg class="" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+      </section>
+    </form>
+    <aside class="summary" aria-labelledby="co-summary">
+      <h2 id="co-summary">Ваше замовлення</h2>
+      <ul class="mini-list">
+        <li><img src="images/covers/tykhi-orbity.svg" alt="Обкладинка альбому «Тихі орбіти»" width="600" height="600"><div><p class="mini-list__title">Тихі орбіти</p><p class="text-muted">Vira Nova · 1 шт.</p></div><p>1 190 ₴</p></li>
+        <li><img src="images/covers/pislia-doshchu.svg" alt="Обкладинка альбому «Після дощу»" width="600" height="600"><div><p class="mini-list__title">Після дощу</p><p class="text-muted">Sontse Club · 1 шт.</p></div><p>890 ₴</p></li>
+      </ul>
+      <dl>
+        <div><dt>Проміжна сума</dt><dd>2 080 ₴</dd></div>
+        <div><dt>Доставка</dt><dd>120 ₴</dd></div>
+        <div class="summary__total"><dt>Загальна сума</dt><dd>2 200 ₴</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="logo">GROOVE<span>.</span></p>
+      <p class="text-muted">Інтернет-магазин вінілових платівок для колекціонерів, меломанів і тих, хто тільки починає слухати вініл.</p>
+    </div>
+    <nav aria-label="Навігація у футері">
+      <h2>Навігація</h2>
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="artist.html">Виконавці</a></li>
+        <li><a href="index.html#genres">Жанри</a></li>
+        <li><a href="wishlist.html">Обране</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Інформація для покупців">
+      <h2>Інформація</h2>
+      <ul>
+        <li><a href="index.html#about">Про магазин</a></li>
+        <li><a href="cart.html">Доставка</a></li>
+        <li><a href="profile.html#orders">Повернення</a></li>
+        <li><a href="design-system.html">Дизайн-система</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Контакти</h2>
+      <address>
+        <a href="mailto:hello@groove.example">hello@groove.example</a>
+        <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+        <span>Київ, вул. Прикладна, 1</span>
+      </address>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 GROOVE. Навчальний проєкт.</p>
+      <p>Усі зображення — оригінальні ілюстрації-заглушки.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
