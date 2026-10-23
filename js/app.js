@@ -7,6 +7,10 @@
 (function () {
   'use strict';
 
+  /* Захист: якщо скрипт підключено на сторінці двічі, виконується лише перше підключення */
+  if (window.__grooveApp) return;
+  window.__grooveApp = true;
+
   /* ===== 1. ДАНІ ===== */
   const PRODUCTS = [
     { id: 1, slug: "tykhi-orbity", title: "Тихі орбіти", artist: "Vira Nova", genre: "Electronic", year: 2024, price: 1190, fmt: "2LP", cond: "Нова", new: true, stock: true },
